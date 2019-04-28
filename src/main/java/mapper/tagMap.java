@@ -1,7 +1,7 @@
 package mapper;
 
 import lombok.extern.slf4j.Slf4j;
-import pojo.schema;
+import pojo.Schema;
 import java.util.Collections;
 import java.util.Map;
 
@@ -13,12 +13,15 @@ public class tagMap {
 
     public tagMap(Map<keyMap, entryRead> mappers) {
         this.mappers = Collections.unmodifiableMap(mappers);
-        public entryRead match(schema event){
+        public entryRead match(Schema event)
+        {
             keyMap key = new keyMap(event.getf1(),event.getf2());
             return mappers.get(key);
 
         }
 
-        public Map<keyMap,entryRead> getMappings(){return mappers;}
+        public Map<keyMap,entryRead> getMappings(){
+            return mappers;
+        }
     }
 }

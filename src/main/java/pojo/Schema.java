@@ -10,7 +10,7 @@ import java.beans.Visibility;
 @ToString
 @Slf4j
 @JsonAutoDetect(fieldVisibility = Visibility.ANY,getterVisibility=Visibility.NONE,setterVisibility=Visibility.NONE)
-public class schema {
+public class Schema {
     public static final String f1="F1";
     public static final String f2="F2";
     public static final String f3="F3";
